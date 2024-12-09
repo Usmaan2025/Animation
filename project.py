@@ -27,8 +27,8 @@ print(adult_genres)
 print("\nTop Genres in Kids Animated Films:")
 print(kids_genres)
 
-df['release_date'] = pd.to_datetime(df['release_date'], errors='coerce')  # Handle errors during conversion
-df['release_year'] = df['release_date'].dt.year  # Extract year from release_date
+df['release_date'] = pd.to_datetime(df['release_date'], errors='coerce')
+df['release_year'] = df['release_date'].dt.year
 
 adult_movies = df[df['adult'] == True]
 kids_movies = df[df['adult'] == False]
